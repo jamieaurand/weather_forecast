@@ -28,4 +28,19 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  address_label: "Enter an address to retrieve weather forecast:"
+  errors:
+    address_service_error: Unable to parse address at this time. Please try again later.
+    coordinates_not_found: Unable to locate the specified city and zip code.
+    coordinates_service_error: Unable to retrieve coordinates at this time. Please try again later.
+    empty_address: Please provide an address.
+    invalid_forecast: Unable to retrieve weather forecast.
+    parse_error: Unable to parse the address. Please enter a valid US address.
+  forecast:
+    cached: Current forecast is from a cached result.
+    high: "High: %{high}"
+    low: "Low: %{low}"
+    temperature: "Current temperature: %{temp}"
+  header: Weather Forecast
+  submit: Submit
+  title: Weather Forecast

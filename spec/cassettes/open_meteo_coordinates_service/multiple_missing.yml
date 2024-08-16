@@ -1,0 +1,33 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding-api.open-meteo.com/v1/search?name=97213
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 18 Aug 2024 20:59:53 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '1039'
+      connection:
+      - keep-alive
+      x-encoding-time:
+      - 0.0036954879760742188 ms
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"id":5746545,"name":"Portland","latitude":45.52345,"longitude":-122.67621,"elevation":12.0,"feature_code":"PPLA2","country_code":"US","admin1_id":5744337,"admin2_id":5742126,"timezone":"America/Los_Angeles","population":632309,"postcodes":["97201","97202","97203","97204","97205","97206","97207","97208","97209","97210","97211","97212","97213","97214","97215","97216","97217","97218","97219","97220","97221","97227","97228","97230","97231","97232","97233","97236","97238","97240","97242","97253","97254","97256","97258","97266","97280","97282","97283","97286","97290","97292","97293","97294","97296"],"country_id":6252001,"country":"United
+        States","admin1":"Oregon","admin2":"Multnomah"},{"id":3570584,"name":"Le Gros-Morne","latitude":14.7,"longitude":-61.0,"elevation":132.0,"feature_code":"PPL","country_code":"MQ","admin3_id":3570445,"admin4_id":6690663,"timezone":"America/Martinique","population":11025,"postcodes":["97213"],"admin3":"Arrondissement
+        de La Trinité","admin4":"Gros-Morne"}],"generationtime_ms":0.2760887}'
+  recorded_at: Sun, 18 Aug 2024 20:59:53 GMT
+recorded_with: VCR 6.2.0

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Weather Forecast" %></title>
+    <title><%= content_for(:title) || I18n.t("title") %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -13,11 +13,17 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "application" %>
   </head>
 
   <body>
+    <h1><%= I18n.t("header") %></h1>
+    <div><%= flash[:error] %></div>
+    <%= form_tag "/weather", method: "get" do %>
+      <label for="address"><%= I18n.t("address_label") %></label>
+      <%= text_field_tag :address, nil, required: true, minlength: 2, maxlength: 100, autofocus: true %>
+      <%= submit_tag I18n.t("submit") %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

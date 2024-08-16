@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding-api.open-meteo.com/v1/search?name=95014
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 18 Aug 2024 00:58:25 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '391'
+      connection:
+      - keep-alive
+      x-encoding-time:
+      - 0.0030994415283203125 ms
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"id":5341145,"name":"Cupertino","latitude":37.323,"longitude":-122.03218,"elevation":72.0,"feature_code":"PPL","country_code":"US","admin1_id":5332921,"admin2_id":5393021,"timezone":"America/Los_Angeles","population":60572,"postcodes":["95014","95015"],"country_id":6252001,"country":"United
+        States","admin1":"California","admin2":"Santa Clara"}],"generationtime_ms":0.37705898}'
+  recorded_at: Sun, 18 Aug 2024 00:58:25 GMT
+- request:
+    method: get
+    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_max%2Ctemperature_2m_min&latitude=37.323&longitude=-122.03218&temperature_unit=fahrenheit
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 18 Aug 2024 00:58:26 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"latitude":37.312122,"longitude":-122.0445,"generationtime_ms":0.03695487976074219,"utc_offset_seconds":0,"timezone":"GMT","timezone_abbreviation":"GMT","elevation":74.0,"current_units":{"time":"iso8601","interval":"seconds","temperature_2m":"°F"},"current":{"time":"2024-08-18T00:45","interval":900,"temperature_2m":78.3},"daily_units":{"time":"iso8601","temperature_2m_max":"°F","temperature_2m_min":"°F"},"daily":{"time":["2024-08-18","2024-08-19","2024-08-20","2024-08-21","2024-08-22","2024-08-23","2024-08-24"],"temperature_2m_max":[79.9,83.1,86.0,86.2,82.1,77.1,79.2],"temperature_2m_min":[58.4,50.7,61.4,62.4,57.9,59.7,60.8]}}'
+  recorded_at: Sun, 18 Aug 2024 00:58:26 GMT
+recorded_with: VCR 6.2.0

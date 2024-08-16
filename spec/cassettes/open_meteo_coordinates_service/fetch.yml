@@ -1,0 +1,32 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding-api.open-meteo.com/v1/search?name=95014
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 18 Aug 2024 20:59:52 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '391'
+      connection:
+      - keep-alive
+      x-encoding-time:
+      - 0.0032067298889160156 ms
+    body:
+      encoding: UTF-8
+      string: '{"results":[{"id":5341145,"name":"Cupertino","latitude":37.323,"longitude":-122.03218,"elevation":72.0,"feature_code":"PPL","country_code":"US","admin1_id":5332921,"admin2_id":5393021,"timezone":"America/Los_Angeles","population":60572,"postcodes":["95014","95015"],"country_id":6252001,"country":"United
+        States","admin1":"California","admin2":"Santa Clara"}],"generationtime_ms":0.37801266}'
+  recorded_at: Sun, 18 Aug 2024 20:59:52 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,33 @@
+<div>
+  <%= I18n.t("forecast.temperature", temp: @forecast.temperature) %>
+</div>
+<div>
+  <%= I18n.t("forecast.high", high: @forecast.high) %>
+</div>
+<div>
+  <%= I18n.t("forecast.low", low: @forecast.low) %>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <% @forecast.future.each do |day| %>
+          <td><%= day[:date] %></td>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @forecast.future.each do |day| %>
+          <td>
+            <div><%= I18n.t("forecast.high", high: day[:high]) %></div>
+            <div><%= I18n.t("forecast.low", low: day[:low]) %></div>
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<% if @cached %>
+  <aside><%= I18n.t("forecast.cached") %></aside>
+<% end %>
