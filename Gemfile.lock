@@ -106,10 +106,11 @@ GEM
     erubi (1.13.0)
     faker (3.4.2)
       i18n (>= 1.8.11, < 2)
-    faraday (2.10.1)
-      faraday-net_http (>= 2.0, < 3.2)
+    faraday (2.12.0)
+      faraday-net_http (>= 2.0, < 3.4)
+      json
       logger
-    faraday-net_http (3.1.1)
+    faraday-net_http (3.3.0)
       net-http
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -126,7 +127,7 @@ GEM
       reline (>= 0.4.2)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
-    logger (1.6.0)
+    logger (1.6.1)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -307,7 +308,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
-    uri (0.13.0)
+    uri (0.13.1)
     useragent (0.16.10)
     vcr (6.3.1)
       base64
